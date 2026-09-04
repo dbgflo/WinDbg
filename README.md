@@ -1,5 +1,8 @@
 # WinDbg
 
+Download latest version from Releases:       
+https://github.com/dbgvora/WinDbg/releases/tag/1.2606
+
 ## Introduction
 
 WinDbg is a debugging environment designed for analyzing Windows user-mode applications, kernel components, drivers, and memory dump files. It provides direct visibility into process state, memory layout, execution flow, and operating system structures, allowing engineers to investigate software failures beyond standard logging mechanisms. The debugger supports both live debugging sessions and offline analysis of crash dumps generated after unexpected application or system termination.
@@ -41,6 +44,6 @@ db poi(rsp)
 dq rsp
 ```
 
-The `lm` command lists loaded modules and their memory ranges, helping identify the component responsible for execution. Commands such as `db`, `dd`, `dq`, and `dps` display memory using different formats, allowing raw bytes, integers, pointers, or symbols to be interpreted correctly. Heap extension commands expose allocation statistics and detect corruption patterns that indicate overwritten metadata or invalid deallocation.
+The `lm` command lists loaded modules and their memory ranges, helping identify the component responsible for execution. Commands such as `db`, `dd`, `dq`, and `dps` display memory using different formats, allowing raw bytes, integers, pointers, or symbols to be interpreted correctly. Heap extension commands expose allocation statistics and detect corruption patterns that indicate overwritten metadata or invalid deallocation
 
-Kernel debugging extends these techniques to operating system objects, including processes, threads, device objects, and synchronization primitives. Comparing memory before and after critical operations makes it easier to identify buffer overruns, use-after-free conditions, race conditions, and invalid pointer access. Careful interpretation of execution context together with memory contents enables accurate root-cause analysis even when failures occur long before the dump file is generated.
+Kernel debugging extends these techniques to operating system objects, including processes, threads, device objects, and synchronization primitives. Comparing memory before and after critical operations makes it easier to identify buffer overruns, use-after-free conditions, race conditions, and invalid pointer access. Careful interpretation of execution context together with memory contents enables accurate root-cause analysis even when failures occur long before the dump file is generated
