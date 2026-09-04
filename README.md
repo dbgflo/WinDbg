@@ -39,7 +39,6 @@ When analyzing a dump file, the first objective is usually identifying the fault
 lm
 db poi(rsp)
 dq rsp
-!heap -s
 ```
 
 The `lm` command lists loaded modules and their memory ranges, helping identify the component responsible for execution. Commands such as `db`, `dd`, `dq`, and `dps` display memory using different formats, allowing raw bytes, integers, pointers, or symbols to be interpreted correctly. Heap extension commands expose allocation statistics and detect corruption patterns that indicate overwritten metadata or invalid deallocation.
